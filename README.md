@@ -511,10 +511,10 @@ Request/Response bodies and message contents are represented with an entity with
 
 | Field           | Type            | Description                                                                                                                                                 |
 |-----------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| contentType     | string          | The content type of the body from the [IANA registry](https://www.iana.org/assignments/media-types/media-types.xhtml)                                       |
-| encoded         | string or false | If the body has been encoded (for example, with base64), the encoding used. Otherwise false. Note for JSON stored in string form, encoded should be `JSON`. |
-| contents        | string or JSON  | If encoded, must be a string value. Otherwise, can be any JSON.                                                                                             |
-| contentTypeHint | string          | A hint to support how new types of content must be processed. Value must be `BINARY` or `TEXT`.                                                             |
+| contentType     | string          | OPTIONAL. The content type of the body from the [IANA registry](https://www.iana.org/assignments/media-types/media-types.xhtml)                             |
+| encoded         | string or false | OPTIONAL. If the body has been encoded (for example, with base64), the encoding used. Otherwise false. Note for JSON stored in string form, encoded should be `JSON`. |
+| content         | string or JSON  | If encoded, must be a string value. Otherwise, can be any JSON.                                                                                             |
+| contentTypeHint | string          | OPTIONAL. A hint to support how new types of content must be processed. Value must be `BINARY` or `TEXT`.                                                   |
 
 Example:
 ```json
